@@ -1,0 +1,119 @@
+.navigation {
+  list-style: none;
+  margin: 0;
+  background: coral;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  
+}
+
+.navigation a {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  text-decoration: none;
+  display: inline-flex;
+  display: block;
+  background-color: coral;
+  width: 25em;
+  padding: 1em;
+  color: snow;
+  border:solid;
+  border-color: snow;
+}
+
+.pages {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.pages {
+  text-align: center;
+}
+
+.navigation a:hover {
+  color: black;
+  background: #ffab81;
+  border: solid;
+  border-color:black;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 100%;
+}
+
+.header {
+  background: #e6e6fa;
+  background-image: url("./pics/CartoonCity2.jpg");
+  background-position: center 300px;
+}
+
+.footer {
+  background: coral;
+  color: white;
+  text-align: right;
+}
+
+.main {
+  text-align: left;
+  background: #00cdcd;
+  color: white;
+}
+
+.aside {
+  background: #e6e6fa;
+  height: 35em;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: auto;
+    
+  }
+}
+
+
+@media all and (min-width: 800px) {
+
+    .main {
+    flex: 100em;
+    height: 35em;
+  }
+  .navigation {
+    order: 1;
+  }
+  
+  .aside-1 {
+    order: 2;
+  }
+
+  .main {
+    order: 3;
+  }
+
+  .aside-2 {
+    order: 4;
+  }
+
+  .footer {
+    order: 5;
+  }
+}
+
+body {
+    background-color: #e6e6fa;
+}
