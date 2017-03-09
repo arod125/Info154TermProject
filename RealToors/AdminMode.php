@@ -8,9 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <script src="scripts.js"></script>
         <div class="wrapper">
-            <header class="header"><a href="./Homepage.html"><img src="pics/RealToors.jpg" alt="RealToor"></a>
+            <header class='header'><a href="./Homepage.html"><img src="pics/RealToors.jpg" alt="RealToor"></a>
                 <div> 
                     <button id="button" type="button" name="login" value="register" onclick="openNav()">&#9977; Log in/Register &#9977;</button>
                     <div id="TheSideBar" class="SideBar">
@@ -31,7 +30,8 @@
                 <li><a href="./ContactUs.html"> Contact Us</a></li>
             </ul>
             <article class="main">
-                List of events 
+                Blah blah blah blah blahahah? blah blah blah blah. Blah blah blah, blah blah's blah blah. blah blah.
+                blah blah.
             </article> 
             <aside class="aside aside-1"></aside>
             <aside class="aside aside-2"></aside>
