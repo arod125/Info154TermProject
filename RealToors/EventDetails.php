@@ -51,19 +51,34 @@ $eventdetails = mysql_fetch_assoc($mainevent_display);
             
             <article class="main">
                 <!--Here, page delivers details based on specific row(event) information from MySQL command on lines 11-13-->
-                <h1><?php echo "<center><i>".$eventdetails['Name']."</i></center>" ?></h1>
-                <?php 
-                echo "<center><img src='pics/" .$eventdetails['ID']. ".jpg'></></center><br><br>";
-                echo "<center><b>Date:</b> " .$eventdetails['Date']. "</center><br><br>";
-                echo "<center><b>Time:</b> " .$eventdetails['Start Time']. "- " .$eventdetails['End Time'] . "</center><br><br>";
-                echo "<center><b>Description:</b> ".$eventdetails['Description']."</center><br><br>";
-                ?>                
+                <div class="EventDetails">
+                    <h1><?php echo "<center><i>".$eventdetails['Name']."</i></center>" ?></h1>
+                    <?php 
+                    echo "<center><img src='pics/" .$eventdetails['ID']. ".jpg'></></center><br><br>";
+                    echo "<center><b>Date:</b> " .$eventdetails['Date']. "</center><br><br>";
+                    echo "<center><b>Time:</b> " .$eventdetails['Start Time']. "- " .$eventdetails['End Time'] . "</center><br><br>";
+                    echo "<center><b>Description:</b> ".$eventdetails['Description']."</center><br><br>";
+                    ?>
+                </div>
             </article> 
             
             <aside class="aside aside-1"></aside>
             <aside class="aside aside-2"></aside>
             
-            <footer class="footer">Created By: <br> JEKSAR</footer>
+            <footer class="footer">
+                <div> 
+                    <button id="button" type="button" name="login" value="register" onclick="openNav()">Created By: <br> JEKSAR</button>
+                    <div id="TheSideBar" class="SideBar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <form class="" name="login" action="LoginAction.php" method="POST">
+                        <h1>Login: </h1>
+                        User Name: <br><input type="text" name="UN"> <br>
+                        Password: <br><input type="password" name="PW"> <br>
+                        <input id="login" type="submit" name="login" onsubmit="LoginAction.php"><br>
+                        </form>
+                    </div>
+                </div>
+            </footer>
             
         </div>
         

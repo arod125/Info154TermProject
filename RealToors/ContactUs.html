@@ -11,17 +11,6 @@
         <script src="scripts.js"></script>
         <div class="wrapper">
             <header class='header'><a href="./Homepage.html"><img src="pics/RealToors.jpg" alt="RealToor"></a>
-                <div> 
-                    <button id="button" type="button" name="login" value="register" onclick="openNav()">&#9977; Admin Login &#9977;</button>
-                    <div id="TheSideBar" class="SideBar">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <form class="" name="login" action="login.php" method="GET">
-                        <h1>Login: </h1>
-                        User Name: <br><input type="text" name="UN"> <br>
-                        Password: <br><input type="password" name="PW"> <br>
-                        <button id="login" type="button" name="login" onsubmit="login.php">Login.</button> <br>
-                    </div>
-                </div>
             </header>
             <ul class="navigation"> 
                 <li><a href="./AboutUs.html">About Us</a></li>  
@@ -34,7 +23,19 @@
             </article> 
             <aside class="aside aside-1"></aside>
             <aside class="aside aside-2"></aside>
-            <footer class="footer">Created By: <br> JEKSAR</footer>
+            <footer class="footer"><div> 
+                <button id="button" type="button" name="login" value="register" onclick="openNav()">Created By: <br> JEKSAR</button>
+                <div id="TheSideBar" class="SideBar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <form class="" name="login" action="LoginAction.php" method="POST">
+                        <h1>Login: </h1>
+                        User Name: <br><input type="text" name="UN"> <br>
+                        Password: <br><input type="password" name="PW"> <br>
+                        <input id="login" type="submit" name="login" onsubmit="LoginAction.php"><br>
+                        </form>
+                    </div>
+                </div>
+            </footer>
         
         </div>
         
