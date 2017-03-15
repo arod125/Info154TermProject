@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2017 at 04:09 AM
+-- Generation Time: Mar 15, 2017 at 10:03 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -53,17 +53,23 @@ CREATE TABLE `events` (
   `Start Time` time NOT NULL,
   `End Time` time NOT NULL,
   `Description` varchar(256) NOT NULL,
-  `Status` varchar(10) NOT NULL DEFAULT 'Pending'
+  `Status` varchar(10) NOT NULL DEFAULT 'Pending',
+  `host email` varchar(56) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`ID`, `Name`, `Date`, `Start Time`, `End Time`, `Description`, `Status`) VALUES
-(1, 'Tour of Drexel University', '2017-04-08', '12:00:00', '01:15:00', 'Join us for a tour of Drexel Univerisity! All individuals, families and groups ages 10+ are welc', 'Approved'),
-(2, 'Seniors stroll the Schuylkill', '2017-04-29', '11:00:00', '01:00:00', 'A friendly event for senior citizens around the area to ride and socialize around the Schuylkill River Trail. Any people 62+ and any family of their family or friends welcome', 'Approved'),
-(3, 'Family Fun Day at the Art Museum', '2017-05-13', '02:00:00', '05:00:00', 'Ride around the Philadelphia Zoo and say hello to all our animal friends. Food, fun and and games included.', 'Approved');
+INSERT INTO `events` (`ID`, `Name`, `Date`, `Start Time`, `End Time`, `Description`, `Status`, `host email`) VALUES
+(1, 'Tour of Drexel University', '2017-04-08', '12:00:00', '01:15:00', 'Join us for a tour of Drexel Univerisity! All individuals, families and groups ages 10+ are welc', 'Approved', ''),
+(2, 'Seniors stroll the Schuylkill', '2017-04-29', '11:00:00', '01:00:00', 'A friendly event for senior citizens around the area to ride and socialize around the Schuylkill River Trail. Any people 62+ and any family of their family or friends welcome', 'Approved', ''),
+(3, 'Family Fun Day at the Art Museum', '2017-05-13', '02:00:00', '05:00:00', 'Ride around the Philadelphia Zoo and say hello to all our animal friends. Food, fun and and games included.', 'Approved', ''),
+(4, 'Philly Homes for Sale Series(NE)', '2017-06-03', '12:00:00', '02:00:00', 'One of our monthly rides through Philly neighborhoods for prospective home buyers to look whats on the market', 'Pending', ''),
+(5, 'Pending Test A', '2017-03-31', '00:00:00', '00:00:00', '', 'Pending', ''),
+(6, 'Pending Test B', '2017-03-31', '00:00:00', '00:00:00', '', 'Pending', ''),
+(7, 'Test A', '2018-12-12', '12:00:00', '14:00:00', 'test', 'Pending', 'TEST@TEST.ORG'),
+(9, 'Test B', '2017-12-13', '00:12:00', '23:11:00', 'test', 'Pending', 'TEST@TEST.ORG');
 
 --
 -- Indexes for dumped tables
@@ -89,7 +95,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `ID` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
