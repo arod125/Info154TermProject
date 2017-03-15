@@ -171,7 +171,7 @@ body {
     background-color: snow;
     color:black;
 }
-/* Below is added css for the events page started by Jeremy on 3/7/2017. Everything above this is the original css
+Below is added css for the events page started by Jeremy on 3/7/2017. Everything above this is the original css
 a.darken {
     flex:auto;
     display: inline-block;
@@ -206,4 +206,4 @@ a.darken:hover span{
     font-size:24px; 
 }
 
-span{display:none;} */
+span{display:none;} 

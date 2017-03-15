@@ -5,11 +5,11 @@
     session_start();
 
     //take it login inputs
-    $loginusername= $_POST['UN'];
-    $loginpassword= $_POST['PW'];
+    $loginusername= mysql_real_escape_string($_POST['UN']);
+    $loginpassword= mysql_real_escape_string($_POST['PW']);
     
     //checks database for matching rows 
-    $query ='SELECT * FROM admins WHERE (username="'.$loginusername.'" AND password="'.$loginpassword.'")';
+    $query ="SELECT * FROM admins WHERE user= '$loginusername' AND password= '$loginpassword'";
     $result = mysql_query($query);
     
     //check to make sure credentials match one and only one account
@@ -17,11 +17,9 @@
     
     if ($usercount == 1){
         echo "Successful login!";
-        $_SESSION['user'] = $loginusername;
         header('Location: AdminMode.php');
+        $_SESSION['user'] = $loginusername;
     }
     else {
         echo "Incorrect credentials. Please try again";
-        header('Location: Homepage.html');
     }
-?>

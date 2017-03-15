@@ -52,9 +52,9 @@ $events_display = mysql_query($events_query);
                         //Each item (event) in the loop is represented with an image based on their id
                         //Inside each image is a link to a custom generated page with more details of the event
                         echo "<div ID=".$events['ID'].">".
-                            "<li class='Eimg'><a href='EventDetails.php?ID=".$events['ID']."' class='darken'>"
+                            "<li class='details'><span> <p>" .$events['Name']. " </p></span></li><li class='Eimg'><a href='EventDetails.php?ID=".$events['ID']."' class='darken'>"
                             . "<img src='pics/".$events['ID'].".jpg' width='600'></></a></li>"
-                            . "<li class='details'><span> <p>" .$events['Description']. " </p></span></li></div><br>";
+                            . "</div><br>";
                     }
                     ?>
                 </ul>
