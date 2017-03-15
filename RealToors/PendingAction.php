@@ -11,7 +11,7 @@ if (isset($_POST['Approve'])){
     $update = mysql_query($update_query);
     header('Location: AdminMode.php');
     echo "<meta http-equiv='refresh' content='0'>";
-    //echo "<h3>approved</h3>";
+    echo "<h3>approved</h3>";
 }
 
 //Updates selected pending events to DENIED
@@ -20,7 +20,8 @@ elseif (isset($_POST['Deny'])) {
     $events_ready = implode(",", $altered_events);
     $update_query = 'UPDATE events SET Status = "Denied" WHERE ID ='.$events_ready.'';
     $update = mysql_query($update_query);
+    header('Location: AdminMode.php');
     echo "<meta http-equiv='refresh' content='0'>";
-    //echo "denied";
+    echo "denied";
 }
 ?>

@@ -42,7 +42,7 @@ $events_display = mysql_query($events_query);
             
             <article class="main">
                 
-                <center><u>Upcoming Events</u></center> <br> 
+                <center><u><h1>Upcoming Events</h1></u></center> 
                 
                 <!--This sets up an unordered list of the items(events) found in the MySQL command-->
                 <ul class="Events" style="list-style: none;">
@@ -51,8 +51,8 @@ $events_display = mysql_query($events_query);
                     while ($events = mysql_fetch_assoc($events_display)){
                         //Each item (event) in the loop is represented with an image based on their id
                         //Inside each image is a link to a custom generated page with more details of the event
-                        echo "<div ID=".$events['ID'].">".
-                            "<li class='details'><span> <p>" .$events['Name']. " </p></span></li><li class='Eimg'><a href='EventDetails.php?ID=".$events['ID']."' class='darken'>"
+                        echo "<br><div ID=".$events['ID'].">".
+                            "<li class='details'> <h4>" .$events['Name']. " </h4></li><li class='Eimg'><a href='EventDetails.php?ID=".$events['ID']."' class='darken'>"
                             . "<img src='pics/".$events['ID'].".jpg' width='600'></></a></li>"
                             . "</div><br>";
                     }

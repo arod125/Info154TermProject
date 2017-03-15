@@ -46,9 +46,9 @@ $events_display = mysql_query($events_query);
                     //This is a loop that displays all pending events as a checklist
                     while ($events = mysql_fetch_assoc($events_display)){
                         //For each event, the 
-                        echo '<label><a href="EventDetails.php?ID='.$events['ID'].'">'
-                                .$events['Name'].'</a> <input type="checkbox" value="'
-                                .$events['ID'].'" name= "name[]"></></label><br>';
+                        echo '<br><label><input type="checkbox" value="'
+                                .$events['ID'].'" name= "name[]"></><a href="EventDetails.php?ID='.$events['ID'].'">'
+                                .$events['Name'].'</a> </label><br>';
                     }
                     ?>
                     
