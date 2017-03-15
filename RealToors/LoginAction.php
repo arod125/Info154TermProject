@@ -16,7 +16,6 @@
     $usercount = mysql_num_rows($result);
     
     if ($usercount == 1){
-        echo "Successful login!";
         header('Location: AdminMode.php');
         $_SESSION['user'] = $loginusername;
     }

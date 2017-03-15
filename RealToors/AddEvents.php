@@ -1,3 +1,7 @@
+<?php 
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,6 +25,14 @@
             </ul>
             
             <article class="main">
+                <?php 
+                if (isset($_SESSION['Error'])){
+                    echo '<h1>'.$_SESSION['Error'].'</h1><br>';
+                    }
+                elseif (isset ($_SESSION['Success'])) {
+                    echo '<h1>'.$_SESSION['Success'].'</h1><br>';
+                }
+                ?>
                 <h1>Event Request Form</h1>
                 <p>Jot down the details for the event you'd like to have, and we will review and decide as soon as possible.</p>
                 <form action="AddEventAction.php" method='POST'>
@@ -29,7 +41,7 @@
                     <br>Start Time: <input type="time" name="start"></><br>
                     <br>End Time: <input type="time" name="end"></><br>
                     <br>Your email: <input type="text" name="email"></><br>
-                    <br>Event Description: <br><textarea name="description" rows="10" cols="50"></textarea>
+                    <br>Event Description: <br><textarea name="description" rows="10" cols="50"></textarea><br>
                     <br><center><input type="submit" name="submit" value="Submit"></></center>
                 </form>
             </article>
