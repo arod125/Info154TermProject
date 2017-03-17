@@ -1,0 +1,207 @@
+.navigation {
+    list-style: none;
+    margin: 0;
+    background: coral;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  
+}
+
+.navigation a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    text-decoration: none;
+    display: inline-flex;
+    display: block;
+    background-color: coral;
+    width: 25em;
+    padding: 1em;
+    color: snow;
+    border:solid;
+    border-color: snow;
+}
+
+.pages {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 35em;
+}
+
+.page {
+    text-align: center;
+   
+}
+
+.navigation a:hover {
+    color: black;
+    background: #ffab81;
+    border: solid;
+    border-color:black;
+    font-style: italic;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper > * {
+    padding: 10px;
+    flex: 100%;
+}
+
+.header {
+    background: #e6e6fa;
+    background-image: url("./pics/CartoonCity2.jpg");
+    background-position: center 300px;
+}
+
+.footer {
+    background: coral;
+    color: white;
+    text-align: right;
+    height: 2em;
+}
+
+.main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background: #00cdcd;
+    color: white;
+    align-items: center;
+}
+
+.Events {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
+}
+
+
+
+.aside {
+    background: #e6e6fa;
+    height: auto;
+}
+
+#button {
+    position: absolute;
+    right: 3em;
+    font-size: .75em;
+    margin-left: 20px;
+    background-color: snow;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: auto;
+    
+  }
+}
+
+
+@media all and (min-width: 800px) {
+
+    .main {
+        flex: 100em;
+        height: auto;
+  }
+    .navigation {order: 1;}
+    .aside-1 {order: 2;}
+    .main {order: 3;}
+    .aside-2 {order: 4;}
+    .footer {order: 5;}
+}
+
+body {
+    background-color: #e6e6fa;
+}
+
+/* The initial sideBar */
+.SideBar {
+    height: 0; 
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    right: 20px;
+    background-color: #e6e6fa;
+    color: black;
+    overflow: hidden;
+    padding-top: 0px;
+    transition: 0.5s;
+
+}
+
+
+/* The Side bar links */
+.SideBar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+
+}
+
+/* Put the close button in the top right corner.*/
+.SideBar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+#login {
+    background-color: snow;
+    color:black;
+}
+//Below is added css for the events page started by Jeremy on 3/7/2017. Everything above this is the original css
+a.darken {
+    flex:auto;
+    display: inline-block;
+    background: black;
+    padding: 0;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    width: auto;
+}
+
+a.darken img {
+    display: block;
+
+    
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+
+a.darken:hover img {
+    opacity: 0.7;
+            
+}
+a.darken:hover span{position:absolute;top:5px;color:#000;left:10px;
+    display:inline-block;
+    z-index:999;
+    left: 360px;
+    color: black;
+    font-size:24px; 
+}

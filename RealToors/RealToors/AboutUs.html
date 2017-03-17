@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Real Toors</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="icon" href="pics/RT.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script src="scripts.js"></script>
+        <div class="wrapper">
+            <header class='header'><a href="./Homepage.html"><img src="pics/RealToors.jpg" alt="RealToor"></a>
+            </header>
+            <ul class="navigation"> 
+                <li><a href="./AboutUs.html">About Us</a></li>  
+                <li><a href="./Events.php"> Events</a></li>  
+                <li><a href="./AddEvents.html"> Create an Event</a></li>  
+                <li><a href="./ContactUs.html"> Contact Us</a></li>
+            </ul>
+            <article class="main">
+                <u>About Us</u><br>
+                <p>RealToors is a nonprofit group dedicated to spreading family health and wellness
+                through organized biking events in and around the city of Philadelphia. We were first founded
+                in 2017 by the JEKSAR group. Our events include biking lessons, competitive racing, casual rides and
+                tours of different places in the Philadelphia area (hence the name RealTOORS).
+                The idea originally came about from Adam Kruger, who imagined RealToors, at first, to be
+                a resource to bring out potential home buyers to fun bike tours of neighborhoods with houses
+                on the market.</p>
+            </article> 
+            <aside class="aside aside-1"></aside>
+            <aside class="aside aside-2"></aside>
+            <footer class="footer">
+                <div> 
+                    <button id="button" type="button" name="login" value="register" onclick="openNav()">Created By: <br> JEKSAR</button>
+                    <div id="TheSideBar" class="SideBar">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <form name="login" action="LoginAction.php" method="POST">
+                        <h1>Login: </h1>
+                        <input type="text" name="UN">User Name: <br> <br>
+                        <input type="password" name="PW">Password: <br> <br>
+                        <input type="submit" id="login" name="login" onsubmit="LoginAction.php"><br>
+                        </form>
+                    </div>
+                </div>
+            </footer>
+        
+        </div>
+        
+    </body>
+</html>
